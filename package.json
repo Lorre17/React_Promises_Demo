@@ -1,0 +1,11 @@
+{
+  "name": "Create a Promise Chain in JavaScript with Promise.prototype.then()",
+  "description": "",
+  "devDependencies": {
+    "parcel-bundler": "^1.10.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}

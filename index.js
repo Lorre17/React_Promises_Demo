@@ -11,13 +11,16 @@ function getFilmTitles(films) {
 }
 // #region End
 
-fetch(API_URL + 'films')
+fetch(API_URL + 'movies')
   .then(async response => {
     if (!response.ok) {
-      throw Error('Unsuccessful response')
+      return Promise.reject(
+        new Error("Unsuccessful response")
+      )
     }
-    const films = await response.json()
-    return (output.innerText = getFilmTitles(films))
+    return response.json().then(films =>{
+      output.innerText = getFilmTitles(films)
+    })
   })
   .catch(error => {
     console.warn(error)
